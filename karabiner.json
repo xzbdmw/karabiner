@@ -766,29 +766,6 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "spacebar"
-                                        },
-                                        {
-                                            "key_code": "caps_lock"
-                                        }
-                                    ]
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "period"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map control+Space to dot",
-                        "manipulators": [
-                            {
-                                "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
                                         "mandatory": [
@@ -1641,4 +1618,3 @@
         }
     ]
 }
-
