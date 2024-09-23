@@ -595,7 +595,7 @@
                         ]
                     },
                     {
-                        "description": "Map cmd+h to F13 in neovide",
+                        "description": "Map option+p to F13 in neovide",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -611,10 +611,10 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "p",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "option"
                                         ]
                                     }
                                 },
@@ -755,27 +755,6 @@
                                 "to": [
                                     {
                                         "key_code": "f16"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map control+Space to dot",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "period"
                                     }
                                 ],
                                 "type": "basic"
