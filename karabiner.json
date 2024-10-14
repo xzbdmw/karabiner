@@ -1473,6 +1473,18 @@
                         "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/Applications/kitty.app/Contents/MacOS/kitty",
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "left_shift"
                                 },
