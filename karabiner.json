@@ -763,6 +763,7 @@
                                     {
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
+                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1414,6 +1415,7 @@
                                     {
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
+                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1433,10 +1435,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "quote",
-                                        "modifiers": [
-                                            "right_option"
-                                        ]
+                                        "key_code": "f7"
                                     }
                                 ],
                                 "type": "basic"
@@ -1451,6 +1450,7 @@
                                     {
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
+                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
