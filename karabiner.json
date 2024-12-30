@@ -628,39 +628,6 @@
                         ]
                     },
                     {
-                        "description": "Map cmd+l to F12 in neovide",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f12"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map cmd+1 to C-9 in kitty",
                         "manipulators": [
                             {
@@ -693,7 +660,7 @@
                         ]
                     },
                     {
-                        "description": "Map cmd+` to C-9 in neovide",
+                        "description": "Map control+Space to dot",
                         "manipulators": [
                             {
                                 "conditions": [
