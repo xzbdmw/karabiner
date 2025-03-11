@@ -1445,19 +1445,11 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "key_code": "f21"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "spacebar",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
