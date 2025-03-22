@@ -920,6 +920,178 @@
                         ]
                     },
                     {
+                        "description": "Map J to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map J to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map K to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map J to Down Arrow in marginnote",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "Map J to Down Arrow in Specific App",
+                                "manipulators": [
+                                    {
+                                        "conditions": [
+                                            {
+                                                "bundle_identifiers": [
+                                                    "QReader.MarginStudyMac"
+                                                ],
+                                                "type": "frontmost_application_if"
+                                            }
+                                        ],
+                                        "from": {
+                                            "key_code": "h"
+                                        },
+                                        "to": [
+                                            {
+                                                "key_code": "left_arrow"
+                                            }
+                                        ],
+                                        "type": "basic"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "Map J to Down Arrow in Specific App",
+                                "manipulators": [
+                                    {
+                                        "conditions": [
+                                            {
+                                                "bundle_identifiers": [
+                                                    "QReader.MarginStudyMac"
+                                                ],
+                                                "type": "frontmost_application_if"
+                                            }
+                                        ],
+                                        "from": {
+                                            "key_code": "l"
+                                        },
+                                        "to": [
+                                            {
+                                                "key_code": "right_arrow"
+                                            }
+                                        ],
+                                        "type": "basic"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map Cmd + 1 to Cmd + S in Arc Browser",
                         "manipulators": [
                             {
