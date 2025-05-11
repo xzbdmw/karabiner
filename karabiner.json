@@ -48,6 +48,30 @@
                         "description": "Map Escape to Control+Command+W",
                         "manipulators": [
                             {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map Escape to Control+Command+W",
+                        "manipulators": [
+                            {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
@@ -317,51 +341,6 @@
                                         "modifiers": [
                                             "control"
                                         ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map d to f7 when space_pressed is 1 in xcode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_pressed",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "vim_mode",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    },
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.dt.Xcode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "space_pressed",
-                                            "value": 0
-                                        }
-                                    },
-                                    {
-                                        "key_code": "f7"
                                     }
                                 ],
                                 "type": "basic"
@@ -975,6 +954,9 @@
                                     },
                                     {
                                         "key_code": "down_arrow"
+                                    },
+                                    {
+                                        "key_code": "down_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -1013,6 +995,100 @@
                                     },
                                     {
                                         "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map J to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "company.thebrowser.Browser"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5"
+                                    },
+                                    {
+                                        "key_code": "j"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map J to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "company.thebrowser.Browser"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "tab"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map K to Down Arrow in Specific App",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome",
+                                            "company.thebrowser.Browser"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5"
+                                    },
+                                    {
+                                        "key_code": "k"
                                     }
                                 ],
                                 "type": "basic"
@@ -1498,6 +1574,7 @@
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
                                             "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+                                            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1525,6 +1602,44 @@
                         ]
                     },
                     {
+                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/Applications/kitty.app/Contents/MacOS/kitty",
+                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+                                            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+                                            "/Applications/Zed.app/Contents/MacOS/zed",
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Arc.app/Contents/MacOS/Arc",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_command"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "f7"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map Left Command + Caps Lock to Left Command + Control",
                         "manipulators": [
                             {
@@ -1532,7 +1647,7 @@
                                     "key_code": "caps_lock",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command"
+                                            "left_shift"
                                         ]
                                     }
                                 },
@@ -1540,7 +1655,7 @@
                                     {
                                         "key_code": "left_control",
                                         "modifiers": [
-                                            "left_command"
+                                            "left_shift"
                                         ]
                                     }
                                 ],
@@ -1557,6 +1672,7 @@
                                         "bundle_identifiers": [
                                             "com.jetbrains.intellij",
                                             "com.jetbrains.goland",
+                                            "com.jetbrains.CLion",
                                             "com.jetbrains.clion",
                                             "com.jetbrains.pycharm"
                                         ],
