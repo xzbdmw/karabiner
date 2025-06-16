@@ -74,6 +74,43 @@
                             {
                                 "conditions": [
                                     {
+                                        "input_sources": [
+                                            {
+                                                "language": "zh-Hans"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f7"
+                                    },
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map Escape to Control+Command+W",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
                                         "bundle_identifiers": [
                                             "com.apple.dt.Xcode"
                                         ],
@@ -1605,22 +1642,6 @@
                         "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
-                                            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-                                            "/Applications/Zed.app/Contents/MacOS/zed",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Arc.app/Contents/MacOS/Arc",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "left_command"
                                 },
