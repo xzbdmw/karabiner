@@ -45,7 +45,7 @@
                         ]
                     },
                     {
-                        "description": "Map Escape to Control+Command+W",
+                        "description": "Map cmd+space to shift+space",
                         "manipulators": [
                             {
                                 "from": {
@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "description": "Map Escape to Control+Command+W",
+                        "description": "Map shift+space to F7+shift+space when Chinese input",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -106,7 +106,7 @@
                         ]
                     },
                     {
-                        "description": "Map Escape to Control+Command+W",
+                        "description": "Map escape to ctrl+shift+c in Xcode",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -665,7 +665,7 @@
                         ]
                     },
                     {
-                        "description": "Map control+Space to dot",
+                        "description": "Map cmd+m to m",
                         "manipulators": [
                             {
                                 "from": {
@@ -686,7 +686,7 @@
                         ]
                     },
                     {
-                        "description": "Map control+open_bracket to delete",
+                        "description": "Map ctrl+u to cmd+backspace (except in terminal/neovide)"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -723,7 +723,7 @@
                         ]
                     },
                     {
-                        "description": "map escape to cmd+escape",
+                        "description": "Map escape to cmd+escape in IDEs"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -759,7 +759,7 @@
                         ]
                     },
                     {
-                        "description": "map escape to control+6 in neovide",
+                        "description": "Map escape to ctrl+7 in terminal/neovide"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -791,7 +791,7 @@
                         ]
                     },
                     {
-                        "description": "map down to cmd+down in qq",
+                        "description": "Map ctrl+j to cmd+down in QQ"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -823,7 +823,7 @@
                         ]
                     },
                     {
-                        "description": "map up to cmd+up in qq",
+                        "description": "Map ctrl+k to cmd+up in QQ"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -855,7 +855,7 @@
                         ]
                     },
                     {
-                        "description": "change arrow key to control+hjkl",
+                        "description": "Map ctrl+hjkl to arrow keys"
                         "manipulators": [
                             {
                                 "from": {
@@ -936,7 +936,7 @@
                         ]
                     },
                     {
-                        "description": "Map J to Down Arrow in Specific App",
+                        "description": "Map j to down arrow in MarginNote",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -960,7 +960,7 @@
                         ]
                     },
                     {
-                        "description": "Map J to Down Arrow in Specific App",
+                        "description": "Map shift+j to 5x down arrow in MarginNote",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1001,7 +1001,7 @@
                         ]
                     },
                     {
-                        "description": "Map K to Down Arrow in Specific App",
+                        "description": "Map shift+k to 5x up arrow in MarginNote",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1042,7 +1042,7 @@
                         ]
                     },
                     {
-                        "description": "Map J to Down Arrow in Specific App",
+                        "description": "Map shift+j to 5+j in Chrome/Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1075,7 +1075,7 @@
                         ]
                     },
                     {
-                        "description": "Map J to Down Arrow in Specific App",
+                        "description": "Map tab to right arrow in Chrome/Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1100,7 +1100,7 @@
                         ]
                     },
                     {
-                        "description": "Map K to Down Arrow in Specific App",
+                        "description": "Map shift+k to 5+k in Chrome/Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1133,7 +1133,7 @@
                         ]
                     },
                     {
-                        "description": "Map J to Down Arrow in marginnote",
+                        "description": "Map hjkl to arrow keys in MarginNote"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1155,7 +1155,7 @@
                                 "type": "basic"
                             },
                             {
-                                "description": "Map J to Down Arrow in Specific App",
+                                "description": "Map h to left arrow in MarginNote",
                                 "manipulators": [
                                     {
                                         "conditions": [
@@ -1179,7 +1179,7 @@
                                 ]
                             },
                             {
-                                "description": "Map J to Down Arrow in Specific App",
+                                "description": "Map l to right arrow in MarginNote",
                                 "manipulators": [
                                     {
                                         "conditions": [
@@ -1237,7 +1237,7 @@
                         ]
                     },
                     {
-                        "description": "Map Option + Tab to Control + Tab",
+                        "description": "Map opt+tab to opt+j in Arc"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1269,7 +1269,7 @@
                         ]
                     },
                     {
-                        "description": "Map Cmd + E to Control + Option + Command + P",
+                        "description": "Map cmd+e to ctrl+opt+cmd+p in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1303,7 +1303,7 @@
                         ]
                     },
                     {
-                        "description": "Map Cmd + E to Control + Option + Command + P",
+                        "description": "Map cmd+= to ctrl+opt+cmd+m in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1337,7 +1337,7 @@
                         ]
                     },
                     {
-                        "description": "Change button4 to c-o in neovide",
+                        "description": "Map mouse button4 to ctrl+o in IDEs"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1378,7 +1378,7 @@
                         ]
                     },
                     {
-                        "description": "Change button5 to c-i in neovide",
+                        "description": "Map mouse button5 to ctrl+i in IDEs"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1419,7 +1419,7 @@
                         ]
                     },
                     {
-                        "description": "Change control i to cmd+[ in arc",
+                        "description": "Map ctrl+i to cmd+] in Arc"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1449,7 +1449,7 @@
                         ]
                     },
                     {
-                        "description": "Change button4 to cmd+[ in arc",
+                        "description": "Map ctrl+o to cmd+[ in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1479,7 +1479,7 @@
                         ]
                     },
                     {
-                        "description": "Change button4 to cmd+[ in arc",
+                        "description": "Map mouse button4 to cmd+[ in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1504,7 +1504,7 @@
                         ]
                     },
                     {
-                        "description": "Change button5 to cmd+] in Arc",
+                        "description": "Map mouse button5 to cmd+] in Arc"
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1534,7 +1534,7 @@
                         ]
                     },
                     {
-                        "description": "Map Cmd + E to Control + Option + Command + P",
+                        "description": "Map cmd+- to ctrl+opt+cmd+M in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1568,7 +1568,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map F21 to shift (lazy) with F7 when alone (except terminal)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1603,7 +1603,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map left shift to F7 when alone (except terminal/Chrome)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1639,7 +1639,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map left cmd to F7 when alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -1661,7 +1661,7 @@
                         ]
                     },
                     {
-                        "description": "Map Left Command + Caps Lock to Left Command + Control",
+                        "description": "Map shift+caps_lock to shift+ctrl",
                         "manipulators": [
                             {
                                 "from": {
@@ -1685,7 +1685,7 @@
                         ]
                     },
                     {
-                        "description": "Map Left Command + Caps Lock to Left Command + Control",
+                        "description": "Map cmd+caps_lock to cmd+ctrl",
                         "manipulators": [
                             {
                                 "from": {
@@ -1709,7 +1709,7 @@
                         ]
                     },
                     {
-                        "description": "Gemini",
+                        "description": "Map ctrl+enter to shift+enter (except Numbers/Neovide)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1742,7 +1742,7 @@
                         ]
                     },
                     {
-                        "description": "Gemini",
+                        "description": "Map caps_lock to ctrl with ctrl+shift+3 when alone in Gemini",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1777,7 +1777,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map caps_lock to ctrl with escape+ctrl+c when alone in JetBrains IDEs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1819,7 +1819,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map caps_lock to ctrl with escape when alone",
                         "manipulators": [
                             {
                                 "from": {
@@ -1874,7 +1874,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map F21 to left shift",
                         "manipulators": [
                             {
                                 "from": {
@@ -1890,7 +1890,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+                        "description": "Map F21 to left shift (duplicate)",
                         "manipulators": [
                             {
                                 "from": {
