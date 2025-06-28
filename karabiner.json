@@ -76,17 +76,17 @@
                                     {
                                         "input_sources": [
                                             {
-                                                "language": "zh-Hans"
+                                                "language": "en"
                                             }
                                         ],
                                         "type": "input_source_if"
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "1",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_shift"
+                                            "left_control"
                                         ]
                                     }
                                 },
@@ -95,9 +95,9 @@
                                         "key_code": "f7"
                                     },
                                     {
-                                        "key_code": "spacebar",
+                                        "key_code": "1",
                                         "modifiers": [
-                                            "left_shift"
+                                            "left_control"
                                         ]
                                     }
                                 ],
@@ -611,39 +611,6 @@
                         ]
                     },
                     {
-                        "description": "Map cmd+1 to C-9 in kitty",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "1",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": [
-                                            "control"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map control+Space to dot",
                         "manipulators": [
                             {
@@ -686,7 +653,7 @@
                         ]
                     },
                     {
-                        "description": "Map ctrl+u to cmd+backspace (except in terminal/neovide)"
+                        "description": "Map ctrl+u to cmd+backspace (except in terminal/neovide)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -723,7 +690,7 @@
                         ]
                     },
                     {
-                        "description": "Map escape to cmd+escape in IDEs"
+                        "description": "Map escape to cmd+escape in IDEs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -759,7 +726,7 @@
                         ]
                     },
                     {
-                        "description": "Map escape to ctrl+7 in terminal/neovide"
+                        "description": "Map escape to ctrl+7 in terminal/neovide",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -791,7 +758,7 @@
                         ]
                     },
                     {
-                        "description": "Map ctrl+j to cmd+down in QQ"
+                        "description": "Map ctrl+j to cmd+down in QQ",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -823,7 +790,7 @@
                         ]
                     },
                     {
-                        "description": "Map ctrl+k to cmd+up in QQ"
+                        "description": "Map ctrl+k to cmd+up in QQ",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -855,7 +822,7 @@
                         ]
                     },
                     {
-                        "description": "Map ctrl+hjkl to arrow keys"
+                        "description": "Map ctrl+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
@@ -1133,7 +1100,7 @@
                         ]
                     },
                     {
-                        "description": "Map hjkl to arrow keys in MarginNote"
+                        "description": "Map hjkl to arrow keys in MarginNote",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1237,7 +1204,7 @@
                         ]
                     },
                     {
-                        "description": "Map opt+tab to opt+j in Arc"
+                        "description": "Map opt+tab to opt+j in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1337,7 +1304,7 @@
                         ]
                     },
                     {
-                        "description": "Map mouse button4 to ctrl+o in IDEs"
+                        "description": "Map mouse button4 to ctrl+o in IDEs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1378,7 +1345,7 @@
                         ]
                     },
                     {
-                        "description": "Map mouse button5 to ctrl+i in IDEs"
+                        "description": "Map mouse button5 to ctrl+i in IDEs",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1419,7 +1386,7 @@
                         ]
                     },
                     {
-                        "description": "Map ctrl+i to cmd+] in Arc"
+                        "description": "Map ctrl+i to cmd+] in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1504,7 +1471,7 @@
                         ]
                     },
                     {
-                        "description": "Map mouse button5 to cmd+] in Arc"
+                        "description": "Map mouse button5 to cmd+] in Arc",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1883,6 +1850,111 @@
                                 "to": [
                                     {
                                         "key_code": "left_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map c-f to option+right (except Neovide)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map c-b to option+left (except Neovide)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map c-w to option+delete (except Neovide)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
