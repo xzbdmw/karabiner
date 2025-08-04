@@ -69,7 +69,7 @@
                         ]
                     },
                     {
-                        "description": "Map shift+space to F7+shift+space when Chinese input",
+                        "description": "Map Ctrl+1 to F7+Ctrl+1 when English input (Bob translator with input tracking)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -92,6 +92,12 @@
                                 },
                                 "to": [
                                     {
+                                        "set_variable": {
+                                            "name": "bob_switched_from_english",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
                                         "key_code": "f7"
                                     },
                                     {
@@ -99,6 +105,52 @@
                                         "modifiers": [
                                             "left_control"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Restore English input when pressing Esc after using Bob translator",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "bob_switched_from_english",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "input_sources": [
+                                            {
+                                                "language": "zh-Hans"
+                                            }
+                                        ],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "caps_lock"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "set_variable": {
+                                            "name": "bob_switched_from_english",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "key_code": "f7"
+                                    },
+                                    {
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
@@ -1709,41 +1761,6 @@
                         ]
                     },
                     {
-                        "description": "Map caps_lock to ctrl with ctrl+shift+3 when alone in Gemini",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.google.Chrome.app.ldklnbmaclmobndmkeimebfncialfgib"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "3",
-                                        "lazy": true,
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map caps_lock to ctrl with escape+ctrl+c when alone in JetBrains IDEs",
                         "manipulators": [
                             {
@@ -1927,13 +1944,14 @@
                         ]
                     },
                     {
-                        "description": "Map c-w to option+delete (except Neovide)",
+                        "description": "Map c-d to option+delete (except Neovide)",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "file_paths": [
                                             "/opt/homebrew/bin/neovide",
+                                            "/Applications/Arc.app/Contents/MacOS/Arc",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
                                             "/Applications/neovide.app/Contents/MacOS/neovide"
@@ -1942,7 +1960,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "w",
+                                    "key_code": "d",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
@@ -1955,6 +1973,176 @@
                                         "modifiers": [
                                             "option"
                                         ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map h to left arrow in NVIDIA Nsight Systems",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map l to right arrow in NVIDIA Nsight Systems",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map navigation keys in NVIDIA Nsight Systems",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "h"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.nvidia.devtools.QuadD"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "hyphen"
                                     }
                                 ],
                                 "type": "basic"
