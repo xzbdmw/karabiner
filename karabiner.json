@@ -1152,6 +1152,33 @@
                         ]
                     },
                     {
+                        "description": "Map shift+k to 5x up arrow in MarginNote",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map hjkl to arrow keys in MarginNote",
                         "manipulators": [
                             {
@@ -1738,6 +1765,12 @@
                                             "com.neovide.neovide"
                                         ],
                                         "type": "frontmost_application_unless"
+                                    },
+                                    {
+                                        "file_paths": [
+                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty"
+                                        ],
+                                        "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
@@ -1752,6 +1785,41 @@
                                     {
                                         "key_code": "return_or_enter",
                                         "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map caps_lock to ctrl with ctrl+shift+3 when alone in Gemini",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.google.Chrome.app.ldklnbmaclmobndmkeimebfncialfgib"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "caps_lock"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "6",
+                                        "lazy": true,
+                                        "modifiers": [
+                                            "left_command",
                                             "left_shift"
                                         ]
                                     }
