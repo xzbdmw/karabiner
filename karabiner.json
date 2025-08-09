@@ -1,18 +1,9 @@
 {
-    "global": {
-        "check_for_updates_on_startup": true,
-        "show_in_menu_bar": true,
-        "show_profile_name_in_menu_bar": false
-    },
     "profiles": [
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 5,
-                    "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
+                    "basic.simultaneous_threshold_milliseconds": 5
                 },
                 "rules": [
                     {
@@ -98,7 +89,10 @@
                                         }
                                     },
                                     {
-                                        "key_code": "f7"
+                                        "key_code": "f7",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
                                     },
                                     {
                                         "key_code": "1",
@@ -147,7 +141,10 @@
                                         }
                                     },
                                     {
-                                        "key_code": "f7"
+                                        "key_code": "f7",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
                                     },
                                     {
                                         "key_code": "escape"
@@ -430,36 +427,6 @@
                                         "modifiers": [
                                             "control"
                                         ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Set vim_mode to true for specific keys and false for escape",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.dt.Xcode"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i"
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "nae": "vim_mode",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "key_code": "i"
                                     }
                                 ],
                                 "type": "basic"
@@ -1020,80 +987,6 @@
                         ]
                     },
                     {
-                        "description": "Map shift+k to 5x up arrow in MarginNote",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "QReader.MarginStudyMac"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map shift+j to 5+j in Chrome/Arc",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.google.Chrome",
-                                            "company.thebrowser.Browser"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "5"
-                                    },
-                                    {
-                                        "key_code": "j"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map tab to right arrow in Chrome/Arc",
                         "manipulators": [
                             {
@@ -1119,14 +1012,13 @@
                         ]
                     },
                     {
-                        "description": "Map shift+k to 5+k in Chrome/Arc",
+                        "description": "Map shift+k to 5x up arrow in MarginNote",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.google.Chrome",
-                                            "company.thebrowser.Browser"
+                                            "QReader.MarginStudyMac"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
@@ -1141,38 +1033,20 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "5"
+                                        "key_code": "up_arrow"
                                     },
                                     {
-                                        "key_code": "k"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map shift+k to 5x up arrow in MarginNote",
-                        "manipulators": [
-                            {
-                                "conditions": [
+                                        "key_code": "up_arrow"
+                                    },
                                     {
-                                        "bundle_identifiers": [
-                                            "QReader.MarginStudyMac"
-                                        ],
-                                        "type": "frontmost_application_if"
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
                                     }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["shift"] }
-                                },
-                                "to": [
-                                    { "key_code": "up_arrow" },
-                                    { "key_code": "up_arrow" },
-                                    { "key_code": "up_arrow" },
-                                    { "key_code": "up_arrow" },
-                                    { "key_code": "up_arrow" }
                                 ],
                                 "type": "basic"
                             }
@@ -1199,54 +1073,54 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map h to left arrow in MarginNote",
+                        "manipulators": [
                             {
-                                "description": "Map h to left arrow in MarginNote",
-                                "manipulators": [
+                                "conditions": [
                                     {
-                                        "conditions": [
-                                            {
-                                                "bundle_identifiers": [
-                                                    "QReader.MarginStudyMac"
-                                                ],
-                                                "type": "frontmost_application_if"
-                                            }
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
                                         ],
-                                        "from": {
-                                            "key_code": "h"
-                                        },
-                                        "to": [
-                                            {
-                                                "key_code": "left_arrow"
-                                            }
-                                        ],
-                                        "type": "basic"
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
-                            },
+                                ],
+                                "from": {
+                                    "key_code": "h"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map l to right arrow in MarginNote",
+                        "manipulators": [
                             {
-                                "description": "Map l to right arrow in MarginNote",
-                                "manipulators": [
+                                "conditions": [
                                     {
-                                        "conditions": [
-                                            {
-                                                "bundle_identifiers": [
-                                                    "QReader.MarginStudyMac"
-                                                ],
-                                                "type": "frontmost_application_if"
-                                            }
+                                        "bundle_identifiers": [
+                                            "QReader.MarginStudyMac"
                                         ],
-                                        "from": {
-                                            "key_code": "l"
-                                        },
-                                        "to": [
-                                            {
-                                                "key_code": "right_arrow"
-                                            }
-                                        ],
-                                        "type": "basic"
+                                        "type": "frontmost_application_if"
                                     }
-                                ]
+                                ],
+                                "from": {
+                                    "key_code": "l"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -1361,7 +1235,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "=",
+                                    "key_code": "equal_sign",
                                     "modifiers": {
                                         "mandatory": [
                                             "command"
@@ -1571,7 +1445,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_bracket",
+                                        "key_code": "close_bracket",
                                         "modifiers": "command"
                                     }
                                 ],
@@ -1592,7 +1466,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "-",
+                                    "key_code": "hyphen",
                                     "modifiers": {
                                         "mandatory": [
                                             "command"
@@ -1601,7 +1475,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "M",
+                                        "key_code": "m",
                                         "modifiers": [
                                             "control",
                                             "option",
@@ -1641,7 +1515,10 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "f7"
+                                        "key_code": "f7",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1677,7 +1554,10 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "f7"
+                                        "key_code": "f7",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1699,7 +1579,10 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "f7"
+                                        "key_code": "f7",
+                                        "modifiers": [
+                                            "fn"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1763,12 +1646,6 @@
                                         "bundle_identifiers": [
                                             "com.apple.iWork.Numbers",
                                             "com.neovide.neovide"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    },
-                                    {
-                                        "file_paths": [
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -2237,105 +2114,59 @@
             },
             "devices": [
                 {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
                     "identifiers": {
-                        "is_keyboard": false,
                         "is_pointing_device": true,
                         "product_id": 165,
                         "vendor_id": 5426
                     },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
+                    "ignore": false
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": false,
                         "product_id": 165,
                         "vendor_id": 5426
                     },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
+                    "manipulate_caps_lock_led": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
-                    "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": true,
                         "product_id": 544,
                         "vendor_id": 1452
                     },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 834,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "ignore": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
-                    "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": true,
                         "product_id": 20797,
                         "vendor_id": 1155
                     },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    "ignore": false
                 },
                 {
                     "disable_built_in_keyboard_if_exists": true,
-                    "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
-                        "is_pointing_device": false,
                         "product_id": 20797,
                         "vendor_id": 1155
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
+                    }
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 544,
+                        "vendor_id": 1452
+                    }
                 }
             ],
             "fn_function_keys": [
-                {
-                    "from": {
-                        "key_code": "f1"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f2"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "display_brightness_increment"
-                        }
-                    ]
-                },
                 {
                     "from": {
                         "key_code": "f3"
@@ -2368,16 +2199,6 @@
                 },
                 {
                     "from": {
-                        "key_code": "f6"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f6"
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "f7"
                     },
                     "to": [
@@ -2405,48 +2226,13 @@
                             "key_code": "f9"
                         }
                     ]
-                },
-                {
-                    "from": {
-                        "key_code": "f10"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "mute"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f11"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_decrement"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "f12"
-                    },
-                    "to": [
-                        {
-                            "consumer_key_code": "volume_increment"
-                        }
-                    ]
                 }
             ],
             "name": "Default profile",
-            "parameters": {
-                "delay_milliseconds_before_open_device": 1000
-            },
             "selected": true,
-            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
-                "indicate_sticky_modifier_keys_state": true,
-                "mouse_key_xy_scale": 100
+                "keyboard_type_v2": "ansi"
             }
         }
     ]
