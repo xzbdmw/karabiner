@@ -7,6 +7,141 @@
                 },
                 "rules": [
                     {
+                        "description": "Activate homerow mode with ctrl+shift+s",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "homerow_activated",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map d to u when homerow_activated",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "u"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map u to d when homerow_activated",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "d"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map gg to G when homerow_activated",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g",
+                                        "modifiers": [
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map G to gg when homerow_activated",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g"
+                                    },
+                                    {
+                                        "key_code": "g"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map cmd+q to F17 in neovide",
                         "manipulators": [
                             {
@@ -1454,6 +1589,39 @@
                         ]
                     },
                     {
+                        "description": "Map cmd+shift+d to option+delete in Arc",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "company.thebrowser.Browser"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map cmd+- to ctrl+opt+cmd+M in Arc",
                         "manipulators": [
                             {
@@ -1761,6 +1929,12 @@
                                     }
                                 ],
                                 "to_if_alone": [
+                                    {
+                                        "set_variable": {
+                                            "name": "homerow_activated",
+                                            "value": 0
+                                        }
+                                    },
                                     {
                                         "key_code": "escape",
                                         "lazy": true
