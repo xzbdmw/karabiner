@@ -10,6 +10,13 @@
                         "description": "Activate homerow mode with ctrl+shift+s",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
@@ -24,6 +31,45 @@
                                         "set_variable": {
                                             "name": "homerow_activated",
                                             "value": 1
+                                        }
+                                    },
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Activate homerow mode with ctrl+shift+s",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "homerow_activated",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "homerow_activated",
+                                            "value": 0
                                         }
                                     },
                                     {
@@ -807,6 +853,47 @@
                         ]
                     },
                     {
+                        "description": "Map ctrl+u to cmd+backspace + ctrl+u in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [
+                                            "command"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "u",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map ctrl+u to cmd+backspace (except in terminal/neovide)",
                         "manipulators": [
                             {
@@ -814,7 +901,6 @@
                                     {
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1205,86 +1291,6 @@
                                 "to": [
                                     {
                                         "key_code": "up_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map h to left arrow in MarginNote",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "QReader.MarginStudyMac"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map l to right arrow in MarginNote",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "QReader.MarginStudyMac"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map Cmd + 1 to Cmd + S in Arc Browser",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "company.thebrowser.Browser"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "1",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "command"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
