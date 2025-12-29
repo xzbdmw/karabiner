@@ -217,6 +217,43 @@
                         ]
                     },
                     {
+                        "description": "Map cmd+shift+d to cmd+shift+e in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map cmd+space to shift+space",
                         "manipulators": [
                             {
@@ -1208,31 +1245,6 @@
                         ]
                     },
                     {
-                        "description": "Map tab to right arrow in Chrome/Arc",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.google.Chrome",
-                                            "company.thebrowser.Browser"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "tab"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map shift+k to 5x up arrow in MarginNote",
                         "manipulators": [
                             {
@@ -1876,38 +1888,6 @@
                                     {
                                         "key_code": "escape",
                                         "lazy": true
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map cmd+enter to cmd+o in Finder",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.apple.finder"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "return_or_enter",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "command"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
