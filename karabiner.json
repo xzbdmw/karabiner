@@ -2,9 +2,7 @@
     "profiles": [
         {
             "complex_modifications": {
-                "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 5
-                },
+                "parameters": { "basic.simultaneous_threshold_milliseconds": 5 },
                 "rules": [
                     {
                         "description": "Activate homerow mode with ctrl+shift+s",
@@ -19,12 +17,7 @@
                                 ],
                                 "from": {
                                     "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control", "shift"] }
                                 },
                                 "to": [
                                     {
@@ -35,10 +28,7 @@
                                     },
                                     {
                                         "key_code": "s",
-                                        "modifiers": [
-                                            "control",
-                                            "shift"
-                                        ]
+                                        "modifiers": ["control", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -58,12 +48,7 @@
                                 ],
                                 "from": {
                                     "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control", "shift"] }
                                 },
                                 "to": [
                                     {
@@ -74,10 +59,7 @@
                                     },
                                     {
                                         "key_code": "s",
-                                        "modifiers": [
-                                            "control",
-                                            "shift"
-                                        ]
+                                        "modifiers": ["control", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -95,14 +77,8 @@
                                         "value": 1
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "d"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "u"
-                                    }
-                                ],
+                                "from": { "key_code": "d" },
+                                "to": [{ "key_code": "u" }],
                                 "type": "basic"
                             }
                         ]
@@ -118,14 +94,8 @@
                                         "value": 1
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "u"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "d"
-                                    }
-                                ],
+                                "from": { "key_code": "u" },
+                                "to": [{ "key_code": "d" }],
                                 "type": "basic"
                             }
                         ]
@@ -141,15 +111,11 @@
                                         "value": 1
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "g"
-                                },
+                                "from": { "key_code": "g" },
                                 "to": [
                                     {
                                         "key_code": "g",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
+                                        "modifiers": ["shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -169,19 +135,11 @@
                                 ],
                                 "from": {
                                     "key_code": "g",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "g"
-                                    },
-                                    {
-                                        "key_code": "g"
-                                    }
+                                    { "key_code": "g" },
+                                    { "key_code": "g" }
                                 ],
                                 "type": "basic"
                             }
@@ -193,25 +151,15 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "q",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["command"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "f17"
-                                    }
-                                ],
+                                "to": [{ "key_code": "f17" }],
                                 "type": "basic"
                             }
                         ]
@@ -222,31 +170,18 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/opt/homebrew/bin/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control", "shift"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "control",
-                                            "shift"
-                                        ]
+                                        "key_code": "y",
+                                        "modifiers": ["control", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -259,18 +194,12 @@
                             {
                                 "from": {
                                     "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_command"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "spacebar",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -283,21 +212,13 @@
                             {
                                 "conditions": [
                                     {
-                                        "input_sources": [
-                                            {
-                                                "language": "en"
-                                            }
-                                        ],
+                                        "input_sources": [{ "language": "en" }],
                                         "type": "input_source_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "1",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_control"] }
                                 },
                                 "to": [
                                     {
@@ -308,15 +229,11 @@
                                     },
                                     {
                                         "key_code": "f7",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "modifiers": ["fn"]
                                     },
                                     {
                                         "key_code": "1",
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
+                                        "modifiers": ["left_control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -334,17 +251,11 @@
                                         "value": 1
                                     },
                                     {
-                                        "input_sources": [
-                                            {
-                                                "language": "zh-Hans"
-                                            }
-                                        ],
+                                        "input_sources": [{ "language": "zh-Hans" }],
                                         "type": "input_source_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
+                                "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
                                         "key_code": "left_control",
@@ -360,13 +271,9 @@
                                     },
                                     {
                                         "key_code": "f7",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "modifiers": ["fn"]
                                     },
-                                    {
-                                        "key_code": "escape"
-                                    }
+                                    { "key_code": "escape" }
                                 ],
                                 "type": "basic"
                             }
@@ -384,16 +291,11 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "escape"
-                                },
+                                "from": { "key_code": "escape" },
                                 "to": [
                                     {
                                         "key_code": "c",
-                                        "modifiers": [
-                                            "left_control",
-                                            "shift"
-                                        ]
+                                        "modifiers": ["left_control", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -419,22 +321,12 @@
                                 ],
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "j"
-                                    },
-                                    {
-                                        "key_code": "j"
-                                    },
-                                    {
-                                        "key_code": "j"
-                                    }
+                                    { "key_code": "j" },
+                                    { "key_code": "j" },
+                                    { "key_code": "j" }
                                 ],
                                 "type": "basic"
                             }
@@ -459,22 +351,12 @@
                                 ],
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "k"
-                                    },
-                                    {
-                                        "key_code": "k"
-                                    },
-                                    {
-                                        "key_code": "k"
-                                    }
+                                    { "key_code": "k" },
+                                    { "key_code": "k" },
+                                    { "key_code": "k" }
                                 ],
                                 "type": "basic"
                             }
@@ -497,9 +379,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "spacebar"
-                                },
+                                "from": { "key_code": "spacebar" },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -536,11 +416,7 @@
                                 ],
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
+                                    "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
@@ -551,9 +427,7 @@
                                     },
                                     {
                                         "key_code": "o",
-                                        "modifiers": [
-                                            "control"
-                                        ]
+                                        "modifiers": ["control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -582,9 +456,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "r"
-                                },
+                                "from": { "key_code": "r" },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -594,9 +466,7 @@
                                     },
                                     {
                                         "key_code": "t",
-                                        "modifiers": [
-                                            "command"
-                                        ]
+                                        "modifiers": ["command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -627,11 +497,7 @@
                                 ],
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
+                                    "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
@@ -642,9 +508,7 @@
                                     },
                                     {
                                         "key_code": "u",
-                                        "modifiers": [
-                                            "control"
-                                        ]
+                                        "modifiers": ["control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -665,11 +529,7 @@
                                 ],
                                 "from": {
                                     "key_code": "c",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
                                     {
@@ -680,9 +540,7 @@
                                     },
                                     {
                                         "key_code": "c",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
+                                        "modifiers": ["shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -701,9 +559,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "a"
-                                },
+                                "from": { "key_code": "a" },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -711,9 +567,7 @@
                                             "value": 1
                                         }
                                     },
-                                    {
-                                        "key_code": "a"
-                                    }
+                                    { "key_code": "a" }
                                 ],
                                 "type": "basic"
                             }
@@ -733,11 +587,7 @@
                                 ],
                                 "from": {
                                     "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
                                     {
@@ -748,9 +598,7 @@
                                     },
                                     {
                                         "key_code": "a",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
+                                        "modifiers": ["shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -769,9 +617,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "o"
-                                },
+                                "from": { "key_code": "o" },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -779,9 +625,7 @@
                                             "value": 1
                                         }
                                     },
-                                    {
-                                        "key_code": "o"
-                                    }
+                                    { "key_code": "o" }
                                 ],
                                 "type": "basic"
                             }
@@ -801,11 +645,7 @@
                                 ],
                                 "from": {
                                     "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
                                     {
@@ -816,9 +656,7 @@
                                     },
                                     {
                                         "key_code": "o",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
+                                        "modifiers": ["shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -829,9 +667,7 @@
                         "description": "Set vim_mode to true for specific keys and false for escape",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "c"
-                                },
+                                "from": { "key_code": "c" },
                                 "to": [
                                     {
                                         "set_variable": {
@@ -839,9 +675,7 @@
                                             "value": 1
                                         }
                                     },
-                                    {
-                                        "key_code": "c"
-                                    }
+                                    { "key_code": "c" }
                                 ],
                                 "type": "basic"
                             }
@@ -853,17 +687,9 @@
                             {
                                 "from": {
                                     "key_code": "spacebar",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "period"
-                                    }
-                                ],
+                                "to": [{ "key_code": "period" }],
                                 "type": "basic"
                             }
                         ]
@@ -874,17 +700,9 @@
                             {
                                 "from": {
                                     "key_code": "m",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_command"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "m"
-                                    }
-                                ],
+                                "to": [{ "key_code": "m" }],
                                 "type": "basic"
                             }
                         ]
@@ -895,35 +713,22 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "command"
-                                        ]
+                                        "modifiers": ["command"]
                                     },
                                     {
                                         "key_code": "u",
-                                        "modifiers": [
-                                            "control"
-                                        ]
+                                        "modifiers": ["control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -936,30 +741,18 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "u",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "command"
-                                        ]
+                                        "modifiers": ["command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -984,18 +777,12 @@
                                 ],
                                 "from": {
                                     "key_code": "escape",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
+                                    "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "escape",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1011,6 +798,7 @@
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
                                             "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1019,15 +807,11 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "escape"
-                                },
+                                "from": { "key_code": "escape" },
                                 "to": [
                                     {
                                         "key_code": "7",
-                                        "modifiers": [
-                                            "control"
-                                        ]
+                                        "modifiers": ["control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1048,18 +832,12 @@
                                 ],
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "down_arrow",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1080,18 +858,12 @@
                                 ],
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "up_arrow",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1105,76 +877,44 @@
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
+                                "to": [{ "key_code": "left_arrow" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
+                                "to": [{ "key_code": "down_arrow" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
+                                "to": [{ "key_code": "up_arrow" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
+                                        "mandatory": ["control"],
+                                        "optional": ["any"]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow"
-                                    }
-                                ],
+                                "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -1191,14 +931,8 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "j"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
+                                "from": { "key_code": "j" },
+                                "to": [{ "key_code": "down_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -1217,28 +951,14 @@
                                 ],
                                 "from": {
                                     "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
+                                    { "key_code": "down_arrow" },
+                                    { "key_code": "down_arrow" },
+                                    { "key_code": "down_arrow" },
+                                    { "key_code": "down_arrow" },
+                                    { "key_code": "down_arrow" }
                                 ],
                                 "type": "basic"
                             }
@@ -1258,28 +978,14 @@
                                 ],
                                 "from": {
                                     "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["shift"] }
                                 },
                                 "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    },
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" },
+                                    { "key_code": "up_arrow" }
                                 ],
                                 "type": "basic"
                             }
@@ -1297,14 +1003,8 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "k"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "up_arrow"
-                                    }
-                                ],
+                                "from": { "key_code": "k" },
+                                "to": [{ "key_code": "up_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -1323,18 +1023,12 @@
                                 ],
                                 "from": {
                                     "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "j",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "key_code": "f5",
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1355,20 +1049,12 @@
                                 ],
                                 "from": {
                                     "key_code": "e",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "p",
-                                        "modifiers": [
-                                            "control",
-                                            "option",
-                                            "command"
-                                        ]
+                                        "modifiers": ["control", "option", "command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1391,19 +1077,12 @@
                                         "type": "frontmost_application_if"
                                     },
                                     {
-                                        "file_paths": [
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Applications/GoLand.app/Contents/MacOS/goland"
-                                        ],
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/Applications/GoLand.app/Contents/MacOS/goland"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    },
+                                    "modifiers": { "optional": ["caps_lock"] },
                                     "pointing_button": "button4"
                                 },
                                 "to": [
@@ -1432,19 +1111,12 @@
                                         "type": "frontmost_application_if"
                                     },
                                     {
-                                        "file_paths": [
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Applications/GoLand.app/Contents/MacOS/goland"
-                                        ],
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/Applications/GoLand.app/Contents/MacOS/goland"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    },
+                                    "modifiers": { "optional": ["caps_lock"] },
                                     "pointing_button": "button5"
                                 },
                                 "to": [
@@ -1463,19 +1135,13 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Arc.app/Contents/MacOS/Arc"
-                                        ],
+                                        "file_paths": ["/Applications/Arc.app/Contents/MacOS/Arc"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "i",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
@@ -1493,19 +1159,13 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Arc.app/Contents/MacOS/Arc"
-                                        ],
+                                        "file_paths": ["/Applications/Arc.app/Contents/MacOS/Arc"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "o",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
@@ -1523,15 +1183,11 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Arc.app/Contents/MacOS/Arc"
-                                        ],
+                                        "file_paths": ["/Applications/Arc.app/Contents/MacOS/Arc"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "pointing_button": "button4"
-                                },
+                                "from": { "pointing_button": "button4" },
                                 "to": [
                                     {
                                         "key_code": "open_bracket",
@@ -1548,18 +1204,12 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/Arc.app/Contents/MacOS/Arc"
-                                        ],
+                                        "file_paths": ["/Applications/Arc.app/Contents/MacOS/Arc"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
                                 "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    },
+                                    "modifiers": { "optional": ["caps_lock"] },
                                     "pointing_button": "button5"
                                 },
                                 "to": [
@@ -1586,19 +1236,12 @@
                                 ],
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control",
-                                            "shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control", "shift"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1614,6 +1257,7 @@
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
                                             "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
                                             "/Users/xzb/.cargo/bin/neovide",
@@ -1622,9 +1266,7 @@
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "f21"
-                                },
+                                "from": { "key_code": "f21" },
                                 "to": [
                                     {
                                         "key_code": "left_shift",
@@ -1634,9 +1276,7 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "f7",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "modifiers": ["fn"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1644,14 +1284,38 @@
                         ]
                     },
                     {
-                        "description": "Map left shift to F7 when alone (except terminal/Chrome)",
+                        "description": "Map left shift to F7 when alone (except terminal/Chrome, unless Raycast active)",
                         "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "raycast_active",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "left_shift" },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "f7",
+                                        "modifiers": ["fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
                             {
                                 "conditions": [
                                     {
                                         "file_paths": [
                                             "/Applications/kitty.app/Contents/MacOS/kitty",
                                             "/Applications/Ghostty.app/Contents/MacOS/ghostty",
+                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
                                             "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
                                             "/opt/homebrew/bin/neovide",
                                             "/Applications/Neovide.app/Contents/MacOS/neovide",
@@ -1661,9 +1325,7 @@
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "left_shift"
-                                },
+                                "from": { "key_code": "left_shift" },
                                 "to": [
                                     {
                                         "key_code": "left_shift",
@@ -1673,9 +1335,7 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "f7",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "modifiers": ["fn"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1686,9 +1346,7 @@
                         "description": "Map left cmd to F7 when alone",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "left_command"
-                                },
+                                "from": { "key_code": "left_command" },
                                 "to": [
                                     {
                                         "key_code": "left_command",
@@ -1698,9 +1356,7 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "f7",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
+                                        "modifiers": ["fn"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1713,18 +1369,12 @@
                             {
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_shift"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "left_control",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1737,18 +1387,12 @@
                             {
                                 "from": {
                                     "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_command"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "left_control",
-                                        "modifiers": [
-                                            "left_command"
-                                        ]
+                                        "modifiers": ["left_command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1770,18 +1414,12 @@
                                 ],
                                 "from": {
                                     "key_code": "return_or_enter",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["left_control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "return_or_enter",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1800,9 +1438,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
+                                "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
                                         "key_code": "left_control",
@@ -1813,10 +1449,7 @@
                                     {
                                         "key_code": "6",
                                         "lazy": true,
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_command", "left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1839,9 +1472,7 @@
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
+                                "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
                                         "key_code": "left_control",
@@ -1856,9 +1487,7 @@
                                     {
                                         "key_code": "c",
                                         "lazy": true,
-                                        "modifiers": [
-                                            "left_control"
-                                        ]
+                                        "modifiers": ["left_control"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1869,9 +1498,7 @@
                         "description": "Map caps_lock to ctrl with escape when alone",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
+                                "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
                                         "key_code": "left_control",
@@ -1898,14 +1525,8 @@
                         "description": "Map F21 to left shift",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "f21"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
+                                "from": { "key_code": "f21" },
+                                "to": [{ "key_code": "left_shift" }],
                                 "type": "basic"
                             }
                         ]
@@ -1916,29 +1537,18 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "right_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1951,29 +1561,18 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "b",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "left_arrow",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1986,30 +1585,18 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Arc.app/Contents/MacOS/Arc",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/opt/homebrew/bin/neovide", "/Applications/Arc.app/Contents/MacOS/Arc", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
                                     "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
+                                    "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "option"
-                                        ]
+                                        "modifiers": ["option"]
                                     }
                                 ],
                                 "type": "basic"
@@ -2026,16 +1613,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "left_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "h" },
+                                "to": [{ "key_code": "left_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -2050,16 +1636,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "right_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "l" },
+                                "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -2074,16 +1659,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "left_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "h" },
+                                "to": [{ "key_code": "left_arrow" }],
                                 "type": "basic"
                             },
                             {
@@ -2093,16 +1677,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "right_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "l" },
+                                "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
                             },
                             {
@@ -2112,16 +1695,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "left_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "a" },
+                                "to": [{ "key_code": "left_arrow" }],
                                 "type": "basic"
                             },
                             {
@@ -2131,16 +1713,15 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d"
-                                },
-                                "to": [
+                                    },
                                     {
-                                        "key_code": "right_arrow"
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
+                                "from": { "key_code": "d" },
+                                "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
                             },
                             {
@@ -2150,17 +1731,18 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "w"
-                                },
+                                "from": { "key_code": "w" },
                                 "to": [
                                     {
                                         "key_code": "equal_sign",
-                                        "modifiers": [
-                                            "shift"
-                                        ]
+                                        "modifiers": ["shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -2172,14 +1754,38 @@
                                             "com.nvidia.devtools.QuadD"
                                         ],
                                         "type": "frontmost_application_if"
+                                    },
+                                    {
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": { "key_code": "s" },
+                                "to": [{ "key_code": "hyphen" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+p to cmd+shift+[ (disabled in Raycast)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "raycast_active",
+                                        "type": "variable_unless",
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "s"
+                                    "key_code": "p",
+                                    "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "hyphen"
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["command", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -2190,14 +1796,8 @@
                         "description": "Map F21 to left shift (duplicate)",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "f21"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
+                                "from": { "key_code": "f21" },
+                                "to": [{ "key_code": "left_shift" }],
                                 "type": "basic"
                             }
                         ]
@@ -2260,64 +1860,28 @@
             ],
             "fn_function_keys": [
                 {
-                    "from": {
-                        "key_code": "f3"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f3"
-                        }
-                    ]
+                    "from": { "key_code": "f3" },
+                    "to": [{ "key_code": "f3" }]
                 },
                 {
-                    "from": {
-                        "key_code": "f4"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f4"
-                        }
-                    ]
+                    "from": { "key_code": "f4" },
+                    "to": [{ "key_code": "f4" }]
                 },
                 {
-                    "from": {
-                        "key_code": "f5"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f5"
-                        }
-                    ]
+                    "from": { "key_code": "f5" },
+                    "to": [{ "key_code": "f5" }]
                 },
                 {
-                    "from": {
-                        "key_code": "f7"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f7"
-                        }
-                    ]
+                    "from": { "key_code": "f7" },
+                    "to": [{ "key_code": "f7" }]
                 },
                 {
-                    "from": {
-                        "key_code": "f8"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f8"
-                        }
-                    ]
+                    "from": { "key_code": "f8" },
+                    "to": [{ "key_code": "f8" }]
                 },
                 {
-                    "from": {
-                        "key_code": "f9"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f9"
-                        }
-                    ]
+                    "from": { "key_code": "f9" },
+                    "to": [{ "key_code": "f9" }]
                 }
             ],
             "name": "Default profile",
