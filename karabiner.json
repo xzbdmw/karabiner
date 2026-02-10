@@ -741,7 +741,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide", "/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
@@ -1498,6 +1498,45 @@
                         "description": "Map caps_lock to ctrl with escape when alone",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "file_paths": [
+                                            "/opt/homebrew/bin/neovide",
+                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
+                                            "/Users/xzb/.cargo/bin/neovide",
+                                            "/Applications/neovide.app/Contents/MacOS/neovide",
+                                            "/Applications/Zed.app/Contents/MacOS/zed"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "caps_lock" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "set_variable": {
+                                            "name": "homerow_activated",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "select_input_source": {
+                                            "language": "en"
+                                        }
+                                    },
+                                    {
+                                        "key_code": "escape",
+                                        "lazy": true
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
                                 "from": { "key_code": "caps_lock" },
                                 "to": [
                                     {
@@ -1784,8 +1823,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "open_bracket",
-                                        "modifiers": ["command", "shift"]
+                                        "key_code": "w",
+                                        "modifiers": ["control", "command"]
                                     }
                                 ],
                                 "type": "basic"
