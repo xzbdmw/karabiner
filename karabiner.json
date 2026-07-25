@@ -5,6 +5,80 @@
                 "parameters": { "basic.simultaneous_threshold_milliseconds": 5 },
                 "rules": [
                     {
+                        "description": "When typing ~ in Chinese input, output ASCII ~ and switch to English",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "zh-Hans" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "grave_accent_and_tilde",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "parameters": { "basic.to_delayed_action_delay_milliseconds": 40 },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } }
+                                ],
+                                "to_delayed_action": {
+                                    "to_if_invoked": [
+                                        {
+                                            "key_code": "grave_accent_and_tilde",
+                                            "modifiers": ["shift"]
+                                        }
+                                    ]
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "When typing / in Chinese input, output / then switch to English",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "zh-Hans" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "slash" },
+                                "to": [
+                                    { "key_code": "slash" },
+                                    { "select_input_source": { "language": "en" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "When typing @ in Chinese input, output @ then switch to English",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "zh-Hans" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": ["shift"]
+                                    },
+                                    { "select_input_source": { "language": "en" } }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Activate homerow mode with ctrl+shift+s",
                         "manipulators": [
                             {
@@ -182,6 +256,205 @@
                                     {
                                         "key_code": "y",
                                         "modifiers": ["control", "shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map ctrl+shift+d to alt+8 in Zed",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Zed.app/Contents/MacOS/zed"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": { "mandatory": ["control", "shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "k",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/opt/homebrew/bin/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/opt/homebrew/bin/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/opt/homebrew/bin/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+k to switch to English + cmd+k in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Neovide.app/Contents/MacOS/neovide", "/opt/homebrew/bin/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": ["command"]
                                     }
                                 ],
                                 "type": "basic"
@@ -790,20 +1063,37 @@
                         ]
                     },
                     {
+                        "description": "Map ctrl+[ to switch to English + ctrl+[ in neovide",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    { "select_input_source": { "language": "en" } },
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map escape to ctrl+7 in terminal/neovide",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
-                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
@@ -1254,15 +1544,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
-                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
@@ -1312,16 +1594,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/Applications/kitty.app/Contents/MacOS/kitty",
-                                            "/Applications/Ghostty.app/Contents/MacOS/ghostty",
-                                            "/Applications/Ghostty 2.app/Contents/MacOS/ghostty",
-                                            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide"
-                                        ],
+                                        "file_paths": ["/Applications/kitty.app/Contents/MacOS/kitty", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide"],
                                         "type": "frontmost_application_unless"
                                     }
                                 ],
@@ -1500,13 +1773,7 @@
                             {
                                 "conditions": [
                                     {
-                                        "file_paths": [
-                                            "/opt/homebrew/bin/neovide",
-                                            "/Applications/Neovide.app/Contents/MacOS/neovide",
-                                            "/Users/xzb/.cargo/bin/neovide",
-                                            "/Applications/neovide.app/Contents/MacOS/neovide",
-                                            "/Applications/Zed.app/Contents/MacOS/zed"
-                                        ],
+                                        "file_paths": ["/opt/homebrew/bin/neovide", "/Applications/Neovide.app/Contents/MacOS/neovide", "/Users/xzb/.cargo/bin/neovide", "/Applications/neovide.app/Contents/MacOS/neovide", "/Applications/Zed.app/Contents/MacOS/zed", "/Applications/Ghostty.app/Contents/MacOS/ghostty", "/Applications/Ghostty 2.app/Contents/MacOS/ghostty"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
@@ -1524,11 +1791,7 @@
                                             "value": 0
                                         }
                                     },
-                                    {
-                                        "select_input_source": {
-                                            "language": "en"
-                                        }
-                                    },
+                                    { "select_input_source": { "language": "en" } },
                                     {
                                         "key_code": "escape",
                                         "lazy": true
@@ -1612,6 +1875,33 @@
                                     {
                                         "key_code": "left_arrow",
                                         "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map c-a to cmd+shift+= (superscript) in Word",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.microsoft.Word"
+                                        ],
+                                        "file_paths": ["/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": ["command", "shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -1840,6 +2130,362 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Map left_shift+left_control+c to alt+p in Ghostty 2",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/Ghostty 2.app/Contents/MacOS/ghostty"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": { "mandatory": ["left_shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+enter to enter then cmd+delete then quote then ctrl+shift+h then wait 30ms then cmd+v in Ghostty 3",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": ["com.mitchellh.ghostty3"],
+                                        "file_paths": ["/Applications/Ghostty 3.app/Contents/MacOS/ghostty"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map cmd+1..9 to option+1..9 and ctrl+[/] to cmd+[/] in WeTERM",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "1",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "2",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "2",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "3",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "4",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "5",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "6",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "6",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "7",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "8",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "8",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "mandatory": ["command"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "9",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "file_paths": ["/Applications/WeTERM.app/Contents/MacOS/WeTERM"],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map w/s/a/d to zoom and scroll in draw.io",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "w" },
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "s" },
+                                "to": [
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "a" },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "d" },
+                                "to": [{ "key_code": "right_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jgraph.drawio.desktop"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -1929,6 +2575,57 @@
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
             }
+        },
+        {
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Caps Lock → Control / Escape when alone",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "caps_lock" },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left Shift → Shift / F7 when alone",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "left_shift" },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "f7",
+                                        "modifiers": ["fn"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fn_function_keys": [
+                {
+                    "from": { "key_code": "f8" },
+                    "to": [{ "key_code": "f8" }]
+                }
+            ],
+            "name": "Clean",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
 }
